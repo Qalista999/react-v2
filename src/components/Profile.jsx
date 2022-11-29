@@ -6,7 +6,7 @@ const Profile = (props) => {
 	return (
 		<div className="row">
 			<div className="col-sm-3">
-				<img src="{user.avatar}" alt="" width={"100%"} />
+				<img src={user.avatar} alt="" width={"100%"} />
 			</div>
 			<div className="col-sm-9">
 				<h1 style={{ backgroundColor: "lightblue" }}>{user.name} {user.lastname}</h1>
