@@ -16,16 +16,16 @@ let users = {};
 // 	5: { name: "Дмитрий", lastname: "Козлов", id: 17 },
 // }
 
-export function getUser() {
-// 	for (let i = 0; i < Object.keys(users).length; i++) {
-// 		if (users[i].id == userId) return users[i]; 
-// 	}
+export function getUser(userId) {
+	for (let i = 0; i < users.length; i++) {
+		if (users[i].id == userId) return users[i]; 
+	}
 	return user;
 }
 
 export async function getUsers() {
 	let response = await fetch("http://f0740810.xsph.ru/getUsers");
 	users = await response.json();
-	console.log(users);
+	// console.log(users);
 	return users;
 }
